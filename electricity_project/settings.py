@@ -20,12 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j2mw=8)*%llcf&hhrxgxlm7&b(+kmr3*lsca7x#fy9!^y_%&oo'
+#SECRET_KEY = 'django-insecure-j2mw=8)*%llcf&hhrxgxlm7&b(+kmr3*lsca7x#fy9!^y_%&oo'
+SECRET_KEY = '#x@n#*k#402mj!x7r3qw38i(d8%t)gomcpv+a8ko$#cz0xp_48'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -127,3 +128,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ALLOWED_HOSTS = ['*']  # for Railway
 
 CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
+import os
+SECRET_KEY = os.environ.get('SECRET_KEY', '#x@n#*k#402mj!x7r3qw38i(d8%t)gomcpv+a8ko$#cz0xp_48')
